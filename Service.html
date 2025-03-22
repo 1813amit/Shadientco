@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadient.co - Feature Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --orange: #FFA500;
+            --light-orange: #FF7A00;
+            --purple: rgba(144, 114, 237, 0.5);
+            --grid-line: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        main{
+          width: 100%;
+          height: 100%;
+          overflow-x: hidden;
+      }
+
+     .menu ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .logo {
+        font-size: 2rem;
+      }
+      .options .nav-link{
+        font-size: 6rem;
+        font-weight: 600;
+      }
+      
+      .home {
+        display: none;
+        justify-content: space-between;
+        padding:1rem;
+       
+        height: 50px;
+      }
+      
+      .menu-div {
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .menu-div:hover {
+        color: gray;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      /* Menu Stuff */
+      .menuv{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .closebtn{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+       font-size: 2rem;
+       background-color: transparent;
+       border: none;
+       color: #fff;
+       padding: 2rem;
+      }
+      .menu {
+        /* opacity: 0.3; */
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0px 50px;
+        position: fixed;
+        top: -100%;
+       
+        align-items: center;
+      
+        background-color:  #110F0F;
+      /* background-color: #2e2e2e; */
+      z-index: 999;
+      }
+     
+      .containers{
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      
+      }
+       .menu-div{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 3rem;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .nav-link:hover {
+        color: gray;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .background {
+        position: absolute;
+        font-size: 15rem;
+        font-weight: 600;
+        color: rgba(235, 235, 235, 0.04);
+        user-select: none;
+        z-index: 1;
+      }
+      
+      .small-number {
+        font-size: 1.2rem;
+      }
+      
+      .exit {
+        cursor: pointer;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+      }
+      
+      .title {
+        font-size: 2rem;
+        color: rgb(170, 151, 126);
+      }
+      
+      .right {
+        padding-right: 100px;
+      }
+      
+      .information {
+        margin-bottom: 24px;
+      }
+      
+      .menu-container {
+        z-index: 3;
+      }
+      
+      .social-medias > a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+      }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            height: 50px;
+            
+            position: relative;
+            background-color: #0F0F0F66;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            width: 30px;
+        }
+
+         .navlinks {
+          display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            color: #fff;
+        }
+
+        .navlinks a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .navlinks a:hover {
+            color: var(--orange);
+        }
+
+        .contact-btn {
+            border: 1px solid var(--orange);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--orange);
+            text-decoration: none;
+            transition: 0.3s;
+            margin-top: -7px;
+        }
+
+        .contact-btn:hover {
+            background: var(--orange);
+            color: #0C0C0C !important;
+        }
+
+        .gradient-bg {
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, #8474C4, transparent 70%);
+            z-index: -1;
+        }
+
+        .orange-gradient {
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, #EF9364, transparent 70%);
+            z-index: -1;
+        }
+
+        .grid-bg{
+          position: relative;
+          width: 100%;
+          height: 70vh;
+          overflow: hidden;
+          
+        }
+
+        section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+     .hero {
+    
+      
+            position: relative;
+            
+            background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 40px 40px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .hero-text-section{
+          max-width: 1200px;
+          padding: 6rem 4rem 4rem;
+          margin: 0 auto;
+        }
+        
+        .hero-text-section small {
+            color: var(--orange);
+            font-weight: 600;
+            
+            font-size: 1.5rem;
+        }
+        
+        .hero-text-section h1 {
+            margin-top: 10px;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+        
+        .hero-text-section p {
+            margin-top:-1.5rem;
+            line-height: 1.4rem;
+            letter-spacing: 1px;
+            color: #aaa;
+            max-width: 550px;
+        }
+        
+        .hero .cta-btn {
+            margin-top: 10px;
+            display: inline-block;
+            background: var(--orange);
+            padding: 12px 24px;
+            border-radius: 20px;
+            color: #0C0C0C;
+            font-weight: 600;
+            max-width: 165px;
+            text-decoration: none;
+        } 
+        
+
+        
+
+        
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ffa726;
+            color: #000;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #121212;
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #f9a825;
+        }
+
+        .card h3 {
+            font-size: 27px;
+            margin-top: 15px;
+        }
+
+        .card p {
+            color: #888;
+            font-size: 15px;
+        }
+
+        footer {
+            padding: 60px 20px;
+            background-color: #0d0d0d;
+          }
+          
+          .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+          
+          .footer-column h4 {
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 1rem;
+          }
+          
+          .footer-column ul {
+            list-style: none;
+            padding: 0;
+          }
+          
+          .footer-column ul li {
+            margin-bottom: 10px;
+            color: #9ca3af;
+            cursor: pointer;
+          }
+          
+          .footer-column ul li:hover {
+            color: #fff;
+          }
+          
+          .footer-right {
+            max-width: 300px;
+          }
+          
+          .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+          }
+          
+          .footer-logo img {
+            width: 35px;
+            margin-right: 10px;
+          }
+          
+          .footer-logo span {
+            font-weight: bold;
+            font-size: 1.1rem;
+          }
+          
+          .footer-right p {
+            margin-bottom: 15px;
+            color: #9ca3af;
+          }
+          
+          .footer-right input {
+            padding: 12px 15px;
+            width: 100%;
+            border: 1px solid #9ca3af;
+            background: #0d0d0d;
+            border-radius: 30px;
+            color: #fff;
+            outline: none;
+          }
+          
+          .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            color: #9ca3af;
+            font-size: 0.9rem;
+          }
+          
+          @media (max-width: 768px) {
+            .footer-container {
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+            }
+            .home{
+              display: flex;
+            }
+          nav{
+            display: none;
+          }
+          .cards{
+            padding: 0 1.5rem;
+            margin-left: -20px;
+          }
+            .section {
+              padding: 2rem 1rem;
+          }
+          .section p{
+            font-size: 12px;
+            width: 80%;
+          }
+          .hero-text-section {
+            max-width: 1200px;
+            padding: 3rem 2rem 4rem;
+            margin: 0 auto;
+        }
+            .footer-right {
+              max-width: 100%;
+            }
+            .options .nav-link{
+              font-size: 4rem;
+              font-weight: 600;
+            }
+          }
+
+        
+
+        @media (max-width: 480px) {
+            .hero-text-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-text-section p {
+                font-size: 0.8rem;
+            }
+            .hero-text-section {
+              max-width: 1200px;
+              padding: 3rem 2rem 4rem;
+              margin: 0 auto;
+          }
+          .cards{
+            padding: 0 1.5rem;
+            margin-left: -20px;
+          }
+            .section {
+              padding: 2rem 1rem;
+          }
+          .section p{
+            font-size: 12px;
+          }
+            .home{
+              display: flex;
+            }
+          nav{
+            display: none;
+          }
+            .btn {
+                font-size: 12px;
+                padding: 10px 20px;
+            }
+
+            .card h3 {
+                font-size: 14px;
+            }
+
+            .card p {
+                font-size: 12px;
+            }
+            .options .nav-link{
+              font-size: 2.5rem;
+              font-weight: 600;
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <main>
+    <div class="grid-bg">
+        <div class="gradient-bg"></div>
+        <div class="orange-gradient"></div>
+        <header>
+          <nav>
+            <div class="logo">
+                <img src="./img/Group.png" alt="logo">
+                <h3>Shadient.co</h3>
+            </div>
+            
+            <div class="navlinks">
+              <a href="#" class="dropdown">Company</a>
+              <a href="/navbar/Service.html">Services</a>
+              <a href="#">Resources</a>
+              <a href="#" class="contact-btn">CONTACT</a>
+            </div>
+             
+</nav>
+
+        <div class="home">
+          <div class="container">
+            <div class="logo">
+              <img src="./img/Group.png" alt="logo">
+              <span>Shadient.co</span>
+            </div>
+        </div>
+          <div class="containers"><div class="menu-div" href="#">Menu</div></div>
+      </div>
+  
+      <!-- Menu Stuff -->
+       <div class="menuv">
+      <div class="menu">
+        <button class="closebtn">close</button>
+  
+          <div class="background">Shadient.co</div>
+          <div class="exit"><img src="./assets/exit.svg" alt="" srcset=""></div>
+          <div class="menu-container">
+              <ul class="options">
+                  <li class="nav"><a href="/" class="nav-link">Company <span class="small-number">01</span></a></li>
+                  <li class="nav"><a href="/Services.html" class="nav-link">Services <span class="small-number">02</span></a></li>
+                 <li class="nav"><a href="#" class="nav-link">Resources <span class="small-number">03</span></a></li>
+                  <li class="nav"><a href="#" class="nav-link">CONTACT <span class="small-number">04</span></a></li>
+              </ul>
+          </div>
+        
+      </div>
+      </div>
+    </header>
+        
+
+        <div class="hero">
+          <div class="hero-text-section">
+
+            <small class="tag">Branding</small>
+            <h1>Find your niche</h1>
+            <p>Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros </p>
+            <a href="#" class="cta-btn">BUILD MY BRAND</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+        <h2>Process</h2>
+        <p>Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit.Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit. Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit. Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit.  </p>
+    </section>
+
+    <section class="section">
+        <h2>Branding Works</h2>
+        <div class="cards">
+            <div class="card">
+                <div style="background: #8b6ee2; height: 120px; border-radius: 4px;"></div>
+                <h3>Creative landing page</h3>
+                <p>Read more <i class="fas fa-arrow-right"></i></p>
+            </div>
+            <div class="card">
+                <div style="background: #8b6ee2; height: 120px; border-radius: 4px;"></div>
+                <h3>Creative landing page</h3>
+                <p>Read more <i class="fas fa-arrow-right"></i></p>
+            </div>
+            <div class="card">
+                <div style="background: #8b6ee2; height: 120px; border-radius: 4px;"></div>
+                <h3>Creative landing page</h3>
+                <p>Read more <i class="fas fa-arrow-right"></i></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Other services</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="./img/Frame (9).png" alt="">
+                <h3>Mobile App</h3>
+                <p>Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices</p>
+            </div>
+            <div class="card">
+                <img src="./img/Frame (10).png" alt="">
+                <h3>SEO</h3>
+                <p>Integer ante non nunc, eget est justo vel semper nunc. Lacus </p>
+            </div>
+            <div class="card">
+                <img src="./img/Frame (11).png" alt="">
+                <h3>User testing</h3>
+                <p>Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est.</p>
+            </div>
+        </div>
+        <br>
+        <a href="#" class="btn">GO TO HOME</a>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+                <li>
+                    <a href="./Abouts.html">About us</a>
+                  </li>
+              <li>Team</li>
+              <li>Careers</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li>Branding</li>
+              <li>Web development</li>
+              <li>Digital marketing</li>
+              <li>Mobile app</li>
+              <li>SEO</li>
+              <li>User testing</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li>Blog</li>
+              <li>Case study</li>
+              <li>Testimonials</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Follow us</h4>
+            <ul>
+              <li>Instagram</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <div class="footer-logo">
+              <img src="./img/Group.png" alt="logo">
+              <span>Shadient.co</span>
+            </div>
+            <p>Get latest updates</p>
+            <input type="email" placeholder="Your email">
+          </div>
+        </div>
+    
+        <div class="footer-bottom">
+          Created by Shadient.co
+        </div>
+      </footer>
+   
+
+    <div class="bottom-bar">Created by Shadient.co</div>
+  </main>
+  <script>
+    const menuBtn = document.querySelector(".containers .menu-div");
+const exitBtn = document.querySelector(".exit");
+
+let t1 = gsap.timeline({ paused: true });
+t1.to(".menu", { opacity: 1, duration: 1, top: 0, ease: Power2.easeInOut });
+t1.to(
+    ".nav",
+    {
+        opacity: 1,
+        marginBottom: 0,
+        duration: 1,
+        ease: Power2.easeInOut,
+        stagger: 0.3,
+    },
+    ">-0.5"
+);
+
+menuBtn.addEventListener("click", () => {
+    t1.play().timeScale(1);
+});
+
+document.querySelector(".closebtn").addEventListener("click",()=>{
+  t1.timeScale(2.5);
+  t1.reverse();
+})
+
+
+</script>
+</body>
+
+</html>

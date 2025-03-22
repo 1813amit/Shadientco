@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shadient.co Landing Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.3/locomotive-scroll.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- GSAP (CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- Locomotive Scroll (CDN) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+   <main>
+  <nav id="navbar">
+    <div class="logo">
+      <img src="./img/Group.png" alt="logo">
+      <span>Shadient.co</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#" class="dropdown">Company</a>
+      <a href="/navbar/Service.html">Services</a>
+      <a href="#">Resources</a>
+      <a href="#" class="contact-btn">CONTACT</a>
+    </div>
+  </nav>
+
+
+
+  <div class="home">
+        <div class="containers">
+          <div class="logo">
+            <img src="./img/Group.png" alt="logo">
+            <span>Shadient.co</span>
+          </div>
+      </div>
+        <div class="containers"><div class="menu-div" href="#">Menu</div></div>
+    </div>
+
+    <!-- Menu Stuff -->
+     <div class="menuv">
+    <div class="menu">
+      <button class="closebtn">close</button>
+
+        <div class="background">Shadient.co</div>
+        <div class="exit"><img src="./assets/exit.svg" alt="" srcset=""></div>
+        <div class="menu-container">
+            <ul class="options">
+                <li class="nav"><a href="/" class="nav-link">Company <span class="small-number">01</span></a></li>
+                <li class="nav"><a href="/Services.html" class="nav-link">Services <span class="small-number">02</span></a></li>
+               <li class="nav"><a href="#" class="nav-link">Resources <span class="small-number">03</span></a></li>
+                <li class="nav"><a href="#" class="nav-link">CONTACT <span class="small-number">04</span></a></li>
+            </ul>
+        </div>
+      
+    </div>
+    </div>
+
+  <div class="container" >
+  <section id="hero-section">
+    <div class="gradient-left"></div>
+    <div class="gradient-right"></div>
+
+    <div class="hero">
+      <h1 class="title">
+        Attract <span class="highlight">NewLeads</span><br />
+        like never before
+      </h1>
+      <p class="description">
+        Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros
+      </p>
+      <form class="form-container" onsubmit="submitEmail(event)">
+        <input type="email" placeholder="Email" required />
+        <button type="submit">ATTRACT</button>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+  <!-- Trusted Companies Section -->
+  <section class="trusted-companies" data-scroll-section>
+    <div class="trusted">
+      <div class="heading-container">
+        <h1 class="heading">Trusted by 200+ companies around the world</h1>
+      </div>
+      <div class="description-container">
+        <p>Vulputate molestie molestie amet leo blandit accumsan. Sapien sed amet tellus purus sit odio eget. Diam morbi faucibus vitae neque id in. Nullam sed et dapibus nunc, porta enim orci urna, sit. Lectus ac.</p>
+      </div>
+    </div>
+    <div class="logos-wrapper">
+      <div class="logos">
+        <div class="logo-box">Logoipsum</div>
+        <div class="logo-box">Offmax</div>
+        <div class="logo-box">Logoipsum</div>
+        <div class="logo-box">Offmax</div>
+        <div class="logo-box">Logoipsum</div>
+        <div class="logo-box">Offmax</div>
+      </div>
+    </div>
+    <div class="logos-wrapper">
+      <div class="logos">
+        <div class="logo-box">Logoipsum</div>
+        <div class="logo-box">Offmax</div>
+        <div class="logo-box">Logoipsum</div>
+        <div class="logo-box">Offmax</div>
+        <div class="logo-box">Logoipsum</div>
+        <div class="logo-box">Offmax</div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- We Offer Section -->
+  <section class="we-offer">
+    <h1 class="heading">We Offer</h1>
+    <p class="description">Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna semper orci a tincidunt. </p>
+    <div class="grid">
+      <div class="card">
+        <img src="./img/Vector.png" alt="" class="icon">
+        <h3>Branding</h3>
+        <p>Egestas tellus nunc proin amet tellus tincidunt lacus consequat.</p>
+      </div>
+      <div class="card">
+        <img src="./img/Frame (7).png" alt="" class="icon">
+        <h3>Web development</h3>
+        <p>Integer ante non nunc, eget est justo vel semper nunc.</p>
+      </div>
+      <div class="card">
+        <img src="./img/Frame (8).png" alt="" class="icon">
+        <h3>Digital marketing</h3>
+        <p>Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas.</p>
+      </div>
+      <div class="card">
+        <img src="./img/Frame (9).png" alt="" class="icon">
+        <h3>Mobile App</h3>
+        <p>Egestas tellus nunc proin amet tellus tincidunt lacus consequat.</p>
+      </div>
+      <div class="card">
+        <img src="./img/Frame (10).png" alt="" class="icon">
+        <h3>SEO</h3>
+        <p>Integer ante non nunc, eget est justo vel semper nunc.</p>
+      </div>
+      <div class="card">
+        <img src="./img/Frame (11).png" alt="" class="icon">
+        <h3>User testing</h3>
+        <p>Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <div class="image-section">
+      <img src="./img/searching-2194247-0.png" alt="Person with binoculars">
+    </div>
+    <div class="text-section">
+      <h2>Why choose us</h2>
+      <p>Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit.</p>
+      <a href="#" class="btn" id="connectBtn">LET'S CONNECT</a>
+    </div>
+  </section>
+
+  <!-- Our Work Section -->
+  <section class="work-section">
+    <div class="work-intro">
+      <h2>Some pieces of our work</h2>
+      <p>Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna semper orci a tincidunt.</p>
+      <a href="#" class="show-more-btn">SHOW MORE</a>
+    </div>
+
+    <div class="work-cards">
+      <div class="card">
+        <div class="placeholder-img"></div>
+        <div class="tag">WEBSITE</div>
+        <h3>Creative landing page</h3>
+        <div class="read-more">Read more <span>➜</span></div>
+      </div>
+
+      <div class="card">
+        <div class="tag">DIGITAL MARKETING</div>
+        <h3>Why We Collect User’s Data</h3>
+        <div class="read-more">Read more <span>➜</span></div>
+      </div>
+
+      <div class="card">
+        <div class="tag">BRANDING</div>
+        <h3>Creative Branding</h3>
+        <div class="read-more">Read more <span>➜</span></div>
+      </div>
+
+      <div class="card">
+        <div class="placeholder-img"></div>
+        <div class="tag">USER TESTING</div>
+        <h3>Creative landing page</h3>
+        <div class="read-more">Read more <span>➜</span></div>
+      </div>
+
+      <div class="card">
+        <div class="tag">DEVELOPMENT</div>
+        <h3>Automation. Advanced Level</h3>
+        <div class="read-more">Read more <span>➜</span></div>
+      </div>
+
+      <div class="card">
+        <div class="tag">SEO</div>
+        <h3>How We Optimized Our SEO</h3>
+        <div class="read-more">Read more <span>➜</span></div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta">
+    <h2>Let’s discuss the idea</h2>
+    <p>Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit.</p>
+    <form class="cta-form">
+      <input type="email" placeholder="Your email" required>
+      <button type="submit">SEND</button>
+    </form>
+    </div>
+    <a href="#" class="cta-btm-btn" id="goToTop">Go To Top</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li>
+            <a href="./Abouts.html"></a>
+          </li>
+          <li>Team</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li>Branding</li>
+          <li>Web development</li>
+          <li>Digital marketing</li>
+          <li>Mobile app</li>
+          <li>SEO</li>
+          <li>User testing</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li>Blog</li>
+          <li>Case study</li>
+          <li>Testimonials</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Follow us</h4>
+        <ul>
+          <li>Instagram</li>
+          <li>Figma</li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <div class="footer-logo">
+          <img src="./img/Group.png" alt="logo">
+          <span>Shadient.co</span>
+        </div>
+        <p>Get latest updates</p>
+        <input type="email" placeholder="Your email">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      Created by Shadient.co
+    </div>
+  </footer>
+</main>
+
+  <!-- Scripts -->
+   <script src="App.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.3/locomotive-scroll.min.js"></script>
+  <script>
+    function submitEmail(e) {
+      e.preventDefault();
+      alert("Thank you for subscribing!");
+    }
+
+    gsap.from(".heading", {
+      opacity: 0,
+      y: 50,
+      duration: 1.5,
+      ease: "power3.out"
+    });
+
+    document.getElementById('connectBtn').addEventListener('click', function (e) {
+      e.preventDefault();
+      alert('Connecting...');
+    });
+
+    const readMoreLinks = document.querySelectorAll('.read-more');
+    readMoreLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Redirecting to full article...');
+      });
+    });
+
+    const form = document.querySelector('.cta-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you! Your email has been submitted.');
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+
+</html>
