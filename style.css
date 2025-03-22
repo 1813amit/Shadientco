@@ -906,6 +906,12 @@ footer {
   cursor: pointer;
 }
 
+.footer-column ul li a {
+color : white ;
+text-decoration :"none";
+}
+
+
 .footer-column ul li:hover {
   color: #fff;
 }
